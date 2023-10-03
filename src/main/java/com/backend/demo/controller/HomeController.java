@@ -14,10 +14,12 @@ public class HomeController {
     private StudentRepository studentRepository;
     @GetMapping("/")
 public String index() {
-    return "Welcome to backend app";
+
+        return "Welcome to backend app from rakib";
 }
 @PostMapping("/saveStudent")
     public Student saveData(@RequestBody Student student){
+       String rakib="";
     studentRepository.save(student);
     return student;
 }
